@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//test
 public class CHEFELEC {
 
     private static int[] converter(String[] input) {
