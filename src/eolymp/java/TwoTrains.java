@@ -1,10 +1,9 @@
 package eolymp.java;
 
-
 import java.util.Scanner;
 
 
-public class CatDogAndHare {
+public class TwoTrains {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -14,11 +13,9 @@ public class CatDogAndHare {
         for (int i = 0; i < input.length; i++)
             inputInt[i] = Integer.valueOf(input[i]);
 
-        double cat = (double) (inputInt[0] - inputInt[1] + inputInt[2]) / 2;
-        double dog = (double) (inputInt[0] + inputInt[1] - inputInt[2]) / 2;
-        double hare = (double) (-inputInt[0] + inputInt[1] + inputInt[2]) / 2;
+        int t2inMins = (inputInt[0] * inputInt[0] * 60) / inputInt[1];
 
 
-        System.out.printf("%.2f %.2f %.2f", cat, dog, hare);
+        System.out.printf(t2inMins / 60 + " " + t2inMins % 60);
     }
 }

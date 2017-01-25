@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-//https://www.e-olymp.com/en/problems/911
 public class QuadraticEquation {
 
     private static Integer[] converter(String[] input) {
