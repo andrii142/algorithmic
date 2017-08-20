@@ -1,13 +1,11 @@
-package codechef;
+package java.codechef;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-/**
- * Created by Andrey on 7/9/16.
- */
-public class EGRANDR {
+public class HORSES {
+    private static int[] numbers;
 
     private static int[] converter(String[] input) {
         int[] output = new int[input.length];
@@ -27,29 +25,20 @@ public class EGRANDR {
             int k = Integer.parseInt(reader.readLine());
             int[] input = converter(reader.readLine().split(" "));
 
-            boolean isStipendium = false;
-            int sum = 0;
+            QuickSort.sort(input);
+            input = QuickSort.numbers;
 
-            for (int i : input) {
-                if(i == 2) {
-                    isStipendium = false;
-                    break;
-                }
-
-                if (i == 5)
-                    isStipendium = true;
-
-                sum += i;
+            int min = input[1] - input[0];
+            for (int i = 1; i < input.length - 1; i++) {
+                int cur = input[i + 1] - input[i];
+                if (cur < min) min = cur;
             }
 
-            double avr = (double) sum / (double) input.length;
-
-            if (avr >= 4.0 && isStipendium)
-                System.out.println("Yes");
-            else System.out.println("No");
+            System.out.println(min);
 
             n--;
         }
     }
+
 
 }

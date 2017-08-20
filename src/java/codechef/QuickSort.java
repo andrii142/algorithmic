@@ -1,4 +1,4 @@
-package codechef;
+package java.codechef;
 
 /**
  * Created by amudrevskyi on 23.06.2016.
